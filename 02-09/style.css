@@ -1,0 +1,41 @@
+/* Estilo gerais para minha página */
+
+body{
+    background-color: azure;
+    /* muda cor de fundo da página */
+
+    color: blue;
+    /* muda a cor da letra*/
+}
+
+/* Estilo para a tag h1 */
+
+h1 {
+    color:rgb(6, 52, 98); 
+    /* Tudo que tiver a etiqueta (tag) h1 vai  ter esta cor*/
+
+    font-family :Verdana, Geneva, Tahoma, sans-serif; 
+    /* Troca a fonte para a que eu ascolhi */
+
+}
+
+button {
+
+    color: rgb(210, 255, 254);
+    /* mudar a cor da letra */
+
+    background-color: rgb(0, 0, 0); 
+    /* troca a cor do fundo */
+}
+
+img {
+    width: 500px ;
+    /* em inglês significa largura */
+
+    height: auto ;
+    /* em inglês significa altura */
+}
+
+a{
+    color: black;
+}
