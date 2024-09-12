@@ -1,0 +1,21 @@
+body{
+    background-color: bisque;
+    color: brown;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h2{
+    color: aquamarine;
+}
+
+h2:hover{
+    color: rgb(127, 127, 253);
+}
+
+button{
+    background-color: rgb(233, 174, 102);
+    
+}
+button:hover{
+    background-color: rgb(170, 117, 51);
+}
