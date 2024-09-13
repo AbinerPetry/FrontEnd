@@ -1,0 +1,15 @@
+h1{
+    background-color: rgb(69, 151, 120);
+    color: rgb(34, 85, 68);
+}
+body{
+    background-color: rgb(173, 213, 170);
+}
+button{
+    color: rgb(202, 160, 241);
+    background-color: rgb(28, 28, 28);
+}
+
+button:hover{ 
+    color: rgb(114, 0, 222);
+}
