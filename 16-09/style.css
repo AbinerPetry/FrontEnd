@@ -1,0 +1,27 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    font-size : 2em;
+    color: aquamarine;
+}
+
+h2 {
+    color: rgb(174, 90, 90);
+}
+
+#titulo-principal {
+
+    background-color: bisque;
+    color: rgb(51, 145, 114);
+    text-align: center;
+}
+
+.topico {
+    text-align: right;
+}
+
+.texto {
+    text-align: justify;
+}

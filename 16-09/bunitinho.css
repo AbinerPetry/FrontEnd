@@ -1,0 +1,34 @@
+body {
+    font: normal 1em Arial, Helvetica, sans-serif;
+}
+
+a {
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(255, 0, 0);
+}
+
+a:visited {
+    color: rgb(143, 9, 9);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.especial:hover {
+    color: rgb(0, 62, 62);
+    background-color: azure;
+    text-decoration: none;
+}
+
+.especial::before {
+    content: 'ᓚᘏᗢ';
+    font-weight: lighter;
+}
+
+.especial::after {
+    content: 'ᓚᘏᗢ';
+    font-weight: lighter;
+}
+
