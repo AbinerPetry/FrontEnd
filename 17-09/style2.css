@@ -1,0 +1,38 @@
+/* Estilo para container principal*/
+#container-principal {
+    background-color: bisque;
+    padding: 20px; /* espaço do lado de dentro */
+    height: 650px; /* altura */
+    border: 2px solid #ccc; /* borda */
+    border-radius: 10px; /* defini os cantos como arrendondados */
+}
+/* Estilo para as caixas com a mesma classe*/
+.caixa-simples {
+    background-color: rgb(1, 175, 117);
+    color: black; /* Defini a cor da letra */
+    width: 100px; /* largura */
+    height: 100px; /* altura */
+    text-align: center; /* Define o alinhamento do texto */
+    line-height: 100px;
+    border-radius: 5px;
+    margin: 10px;
+}
+/* A pseudo classe 'hover' aplica um estilo quando eu passo o mouse por cima do elemento */
+.caixa-simples:hover {
+    background-color: rgb(3, 66, 45);
+}
+/* Estulo para a caixa com ID exclusivo */
+#caixa-diferente{
+    background-color: rgb(145, 203, 203);
+    margin: 10px; /* Espaço do lado de fora */
+    color: black; 
+    width: 100px;
+    height: 100px;
+    text-align: center; /* Define o alinhamento do texto */
+    line-height: 30px; /* Espaçamento entre linhas do texto */
+    border-radius: 10px;
+}
+
+#caixa-diferente:hover{
+    background-color: rgb(57, 92, 92);
+}
