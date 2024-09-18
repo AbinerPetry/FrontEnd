@@ -1,0 +1,20 @@
+#pai {
+    background-color: rgb(251, 194, 125);
+    display: flex;
+    flex-direction: row; /* Controla a direção dos elementos filhos*/
+    height: 300px;
+    justify-content: space-evenly;/* Controla a disposição/espaçamento dos filhos*/
+    flex-wrap: wrap; /* Controla se os itens vão pular para a próxima linha*/
+    align-items: center; /* Alinha os filhos ao longo do eixo secundário */
+
+    /* row,column,row-reverse,column-reverse*/
+    /*row: linha
+    column: coluna*/
+}
+
+.filho{
+    background-color: rgb(254, 153, 30);
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+}
