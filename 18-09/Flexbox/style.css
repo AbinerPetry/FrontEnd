@@ -17,4 +17,23 @@
     width: 50px;
     height: 50px;
     margin: 5px;
+    padding: 5px;
+}
+
+#caixa1{
+    flex-grow: 1;
+    align-self: self-start;
+    order: 3; /* muda a ordem de um filho */
+}
+
+#caixa2{
+    flex-grow: 1;
+    align-self: self-end; /* Permite você alinhar apenas um filho */
+    order: 5;
+}
+
+#caixa3{
+    flex-grow: 1;
+    align-self: self-start;
+    order: -3;
 }
