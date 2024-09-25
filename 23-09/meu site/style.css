@@ -1,5 +1,6 @@
 body {
     margin: 0%;
+    background-color: #858585;
 }
 
 .cabecalho {
@@ -60,4 +61,143 @@ body {
     transform: translateY(-2px);
     background-color: rgb(53, 53, 53);
     box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.2);
+}
+
+.conteiner-pai {
+    display: flex;
+    padding: 25px;
+    justify-content: space-evenly;
+    background-color:  rgb(65, 65, 65);
+    flex-wrap: wrap;
+}
+
+.conteiner-filho { 
+    background-color: rgb(255, 255, 255);
+    width: 200px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    text-align: center;
+}
+
+.conteiner-filho :hover {
+    transform: translateY();
+    background-color:  rgb(160, 160, 160);
+    box-shadow: 0 20px 30px 0;
+}
+
+.imagem_ordo {
+    width: 50%;
+    border-radius: 50%;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+p {
+    font-weight: lighter;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.equipe-pai {
+    display: flex;
+    padding: 25px;
+    background-color:  rgb(65, 65, 65);
+    margin: 20px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.equipe-imagem {
+    width: 300px;
+    height: auto;
+    border-radius: 20%;
+}
+
+.equipe-apoio > h2 {
+    font-size: 100px;
+}
+
+.equipe-apoio > p {
+    font-size: 30px;
+
+ }
+.equipe-apoio {
+    background-color: rgb(65, 65, 65);
+ }
+
+.elementos {
+    display: flex;
+    padding: 25px;
+    background-color:  rgb(65, 65, 65);
+    margin: 20px;
+    align-items: center;
+    justify-content: space-evenly;
+ }
+
+.elementos > div {
+    border: 1px solid #ccc;
+ }
+
+.energia {
+    height: 300px;
+ }
+
+.banner2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(imagens/Agentes_da_Ordo_Realitas.webp);
+    background-size: cover;
+    text-align: center;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    height: 500px;
+
+ }
+
+.form-container {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #85858560;
+    padding: 20px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+ }
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin-top: 10px;
+    text-align: left;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 3px;
+
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #5e5e5e;
+    color: azure;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(32, 32, 32);
 }
