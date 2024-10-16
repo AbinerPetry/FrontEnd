@@ -15,20 +15,6 @@ function alterarTexto(){
     meuParagrafo.textContent = 'o texto foi alterado!';
 
 
-    if(){
-
-    
-
-        
-    }
-
-
-   else {
-    }
-
-   
-}
-
 function aaaaaaaaaa(){
     
     meuParagrafo.style.color = 'red' ;
