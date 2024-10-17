@@ -31,3 +31,8 @@ button:hover {
 #Botao2 {
     background-color: rgb(122, 183, 236);
 }
+
+#imagem {
+    height: auto;
+    width: 1000px;
+}
