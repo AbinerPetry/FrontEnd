@@ -113,7 +113,7 @@ function draw() {
     else if (direction ==='DOWN'){
         snakeY += box;
     }
-
+    
 
     if (snakeX === food.x && snakeY === food.y) {
 
@@ -121,6 +121,13 @@ function draw() {
             x: Math.floor(Math.random() * 20) * box,
             y: Math.floor(Math.random() * 20) * box
         }
+        for(let NúmeroNivel = 0;NúmeroNivel = 100000; i++){
+            Nivel.textContent = `Nivel: ${NúmeroNivel}`
+        
+        }
+        /*NúmeroNivel++;
+        Nivel.textContent = `Nivel: ${NúmeroNivel}`;*/
+
     }
     else{
         snake.pop();
@@ -152,6 +159,7 @@ function collision (head, array) {
 }
 
 const game = setInterval(draw, 150)
+
 
 
     
