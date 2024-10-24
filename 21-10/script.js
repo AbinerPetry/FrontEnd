@@ -130,6 +130,25 @@ function draw() {
     const newHead = {x: snakeX, y: snakeY};
 
     snake.unshift(newHead)
+
+
+    if (snakeX < 0 || snakeX >= canvas.width || snakeY < 0 || snakeY >= canvas.height || collision(newHead, snake)) {
+    clearInterval(game);
+    alert('Game Over!');
 }
 
-setInterval(draw, 150)
+}
+
+
+
+function collision (head, array) {
+    for (let i = 1; i < array.length; i++) {
+        if (head.x === array[i].x && head.y === array[i].y) {
+            return true;
+        }
+    }
+
+    return false; 
+}
+
+const game = setInterval(draw, 70)
