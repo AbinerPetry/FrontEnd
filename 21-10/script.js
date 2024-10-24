@@ -151,4 +151,7 @@ function collision (head, array) {
     return false; 
 }
 
-const game = setInterval(draw, 70)
+const game = setInterval(draw, 150)
+
+
+    
