@@ -4,6 +4,12 @@ const canvas = document.getElementById('gameCanvas');
 // Obtém o contexto 2D do canvas, que permite desenhar nele
 const ctx = canvas.getContext('2d');
 
+// Seleciona o elemento de exibição da pontuação
+const scoreDisplay = document.getElementById('placar');
+
+// Seleciona o elemento de exibição da mensagem de "Game Over"
+const gameOverMessage = document.getElementById('gameOverMessage');
+
 // Define o tamanho de cada quadrado (para a cobra e a comida)
 const box = 20;
 
@@ -19,147 +25,85 @@ let food = {
     y: Math.floor(Math.random() * 20) * box  // Coordenada Y da comida
 };
 
+// Inicializa a pontuação
+let score = 0;
 
-
-
-
-
-
+// Inicializa a velocidade do jogo (em milissegundos)
+let speed = 30;
 
 // Adiciona um ouvinte para eventos de tecla que chama a função changeDirection
 document.addEventListener('keydown', changeDirection);
 
-
-
-
-
 // Função para mudar a direção da cobra com base na tecla pressionada
 function changeDirection(event) {
-    // Verifica se a tecla pressionada é a seta esquerda e se a direção não é 'RIGHT'
-    if (event.keyCode === 37 && direction !== 'RIGHT') {direction = 'LEFT'};
-    // Verifica se a tecla pressionada é a seta para cima e se a direção não é 'DOWN'
-    if (event.keyCode === 38 && direction !== 'DOWN') {direction = 'UP'};
-    // Verifica se a tecla pressionada é a seta direita e se a direção não é 'LEFT'
-    if (event.keyCode === 39 && direction !== 'LEFT') {direction = 'RIGHT'};
-    // Verifica se a tecla pressionada é a seta para baixo e se a direção não é 'UP'
-    if (event.keyCode === 40 && direction !== 'UP') {direction = 'DOWN'};
+    if (event.keyCode === 37 && direction !== 'RIGHT') direction = 'LEFT';
+    if (event.keyCode === 38 && direction !== 'DOWN') direction = 'UP';
+    if (event.keyCode === 39 && direction !== 'LEFT') direction = 'RIGHT';
+    if (event.keyCode === 40 && direction !== 'UP') direction = 'DOWN';
 }
-
-
-
-
-
-
-
 
 // Função que desenha todos os elementos do jogo
 function draw() {
-    // Define a cor de fundo do canvas
-    ctx.fillStyle = '#b0f1ff'; //estilo de fundo
-    // Desenha um retângulo preenchido com a cor que pedimos
-    /*
-        param1 = a coordenada X do canto superior esquerdo do retângulo.
-
-        param2 = a coordenada Y do canto superior esquerdo do retângulo.
-
-        param3 = a largura do retângulo.
-
-        param4 = a altura do retângulo.
-
-    */
+    ctx.fillStyle = '#00afdb';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-
-   // Loop para desenhar cada segmento da cobra
     for (let i = 0; i < snake.length; i++) {
-    // Define a cor do segmento
-    if (i === 0) {
-        ctx.fillStyle = 'green'; // Cabeça
-    } else {
-        ctx.fillStyle = 'lightgreen'; // Resto do corpo
-    }
-    
-    // Desenha o segmento da cobra na posição (x, y)
-    ctx.fillRect(snake[i].x, snake[i].y, box, box);
-    
-    // Define a cor da borda do segmento
-    ctx.strokeStyle = 'darkgreen'; //strokeStyle = estilo de borda
-    
-    // Desenha a borda do segmento
-    ctx.strokeRect(snake[i].x, snake[i].y, box, box);
-
+        ctx.fillStyle = (i === 0) ? 'green' : 'lightgreen';
+        ctx.fillRect(snake[i].x, snake[i].y, box, box);
+        ctx.strokeStyle = 'darkgreen';
+        ctx.strokeRect(snake[i].x, snake[i].y, box, box);
     }
 
-
-    // Define a cor da comida como vermelha
     ctx.fillStyle = 'red';
-    // Desenha a comida na posição gerada aleatoriamente
     ctx.fillRect(food.x, food.y, box, box);
+    ctx.strokeStyle = 'white';
+    ctx.strokeRect(food.x, food.y, box, box);
 
-    // Captura a posição atual da cabeça da cobra
-    let snakeX = snake[0].x; //pega a posição horizontal da cabeça do snake
-    let snakeY = snake[0].y; //pega a posição vertical da cabeça do snake
+    let snakeX = snake[0].x;
+    let snakeY = snake[0].y;
 
-
-    if (direction ==='LEFT'){
-        snakeX -= box; 
-    } 
-    else if (direction ==='UP'){
-        snakeY -= box;
-    }
-    else if (direction ==='RIGHT'){
-        snakeX += box;
-    }
-    else if (direction ==='DOWN'){
-        snakeY += box;
-    }
-    
+    if (direction === 'LEFT') snakeX -= box;
+    if (direction === 'UP') snakeY -= box;
+    if (direction === 'RIGHT') snakeX += box;
+    if (direction === 'DOWN') snakeY += box;
 
     if (snakeX === food.x && snakeY === food.y) {
-
         food = {
             x: Math.floor(Math.random() * 20) * box,
             y: Math.floor(Math.random() * 20) * box
-        }
-        for(let NúmeroNivel = 0;NúmeroNivel = 100000; i++){
-            Nivel.textContent = `Nivel: ${NúmeroNivel}`
-        
-        }
-        /*NúmeroNivel++;
-        Nivel.textContent = `Nivel: ${NúmeroNivel}`;*/
+        };
+        score++;
+        placar.innerHTML = `Pontuação: ${score}`;
 
-    }
-    else{
+        // Aumenta a velocidade do jogo
+        speed = Math.max(50, speed - 10); // Diminui o intervalo, mas não menos que 50ms
+        clearInterval(game);
+        game = setInterval(draw, speed);
+    } else {
         snake.pop();
     }
 
+    const newHead = { x: snakeX, y: snakeY };
 
-    const newHead = {x: snakeX, y: snakeY};
+    if (snakeX < 0 || snakeY < 0 || snakeX >= canvas.width || snakeY >= canvas.height || collision(newHead, snake)) {
+        clearInterval(game);
+        alert('Game Over!');
+    }
 
-    snake.unshift(newHead)
+    snake.unshift(newHead);
 
-
-    if (snakeX < 0 || snakeX >= canvas.width || snakeY < 0 || snakeY >= canvas.height || collision(newHead, snake)) {
-    clearInterval(game);
-    alert('Game Over!');
+    
 }
 
-}
-
-
-
-function collision (head, array) {
-    for (let i = 1; i < array.length; i++) {
+// Função para verificar colisão da cobra com ela mesma
+function collision(head, array) {
+    for (let i = 0; i < array.length; i++) {
         if (head.x === array[i].x && head.y === array[i].y) {
             return true;
         }
     }
-
-    return false; 
+    return false;
 }
 
-const game = setInterval(draw, 150)
-
-
-
-    
+// Inicia o jogo chamando a função draw a cada 150ms
+let game = setInterval(draw, speed);
