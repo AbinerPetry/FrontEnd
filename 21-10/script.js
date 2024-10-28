@@ -29,7 +29,7 @@ let food = {
 let score = 0;
 
 // Inicializa a velocidade do jogo (em milissegundos)
-let speed = 30;
+let speed = 200;
 
 // Adiciona um ouvinte para eventos de tecla que chama a função changeDirection
 document.addEventListener('keydown', changeDirection);
