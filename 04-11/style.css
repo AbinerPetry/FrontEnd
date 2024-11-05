@@ -19,3 +19,25 @@
     height: 70px;
     width: 70px;
 }
+
+.aaa{
+    border-radius: 5%;
+
+    
+}
+
+.aaa:hover {
+    transform: translateY(-200px);
+    box-shadow: 0 20px 30px 0 rgb(0, 0, 0);
+
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px 0 rgba(123, 147, 188, 0.843);
+}
