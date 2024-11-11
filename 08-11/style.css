@@ -1,38 +1,70 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: black;
     color: aliceblue;
+    margin: 0;
+    padding: 0;
+    background-image: url(img/Agentes_da_Ordo_Realitas\ \(1\).webp);
+    background-size: cover;
+}
+
+/* Assim importamos uma fonte no css*/
+@font-face{
+    font-family: 'Splendid';
+    src: url('fontes/SplendidB.ttf') format('truetype');
 }
 
 
 .tituloMenor{
-    font-size: 14px;
+    font-size: 20px;
+    font-family: 'Splendid';
 }
 
 #titulo1{
-    line-height: 15px;
+    line-height: 30px;
+    font-family: 'Splendid';
 }
 
 a {
+    font-size: 20px;
     text-decoration: none;
-    color: black;
+    color: rgb(255, 255, 255);
     font-weight: bold;
+    font-family: 'Splendid';
 }
 
 main{
+    height: 100vh;
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    text-align: center;
     align-items: center;
+   
 }
 
 .botao{
     padding: 5px;
     border-radius: 7px;
-    background-color: rgb(132, 198, 255);
+    background-color: rgb(168, 14, 50);
 }
+
+.botao:hover{
+    background-color: rgb(116, 12, 36);
+    transform: translateY(-10px);
+    box-shadow: 0 5px 10px 0 rgb(255, 0, 0);
+}
+
 
 .filho{
     align-items: center;
+}
+
+.pai{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 30px;
+    border-radius: 30px;
+    background-color: rgba(255, 26, 26, 0.447);
+    box-shadow: 0 0 20px 10px  rgba(165, 4, 4, 0.808);  ;
 }
