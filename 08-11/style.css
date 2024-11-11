@@ -1,11 +1,21 @@
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Splendid';
     color: aliceblue;
     margin: 0;
     padding: 0;
-    background-image: url(img/Agentes_da_Ordo_Realitas\ \(1\).webp);
+    background-image: url(img/milo.jpg);
     background-size: cover;
 }
+
+#body2{
+    font-family: 'Splendid';
+    color: aliceblue;
+    margin: 0;
+    padding: 0;
+    background-image: url(img/milo-e-miguel-v0-pylw3tq5bxdb1.webp);
+    background-size: cover;
+}
+
 
 /* Assim importamos uma fonte no css*/
 @font-face{
@@ -41,15 +51,18 @@ main{
 }
 
 .botao{
-    padding: 5px;
+    margin-top: 20px;
+    padding: 10px 20px;
     border-radius: 7px;
-    background-color: rgb(168, 14, 50);
+    border: none;
+    background-color: rgb(8, 203, 80);
 }
 
 .botao:hover{
-    background-color: rgb(116, 12, 36);
+    text-shadow: 0 0 10px rgb(0, 255, 213);
+    background-color: rgb(45, 116, 12);
     transform: translateY(-10px);
-    box-shadow: 0 5px 10px 0 rgb(255, 0, 0);
+    box-shadow: 0 5px 10px 0 rgb(8, 203, 138);;
 }
 
 
@@ -65,6 +78,6 @@ main{
     align-items: center;
     padding: 30px;
     border-radius: 30px;
-    background-color: rgba(255, 26, 26, 0.447);
-    box-shadow: 0 0 20px 10px  rgba(165, 4, 4, 0.808);  ;
+    background-color: rgba(17, 246, 162, 0.447);
+    box-shadow: 0 0 20px 10px  rgba(4, 165, 146, 0.808);  ;
 }
