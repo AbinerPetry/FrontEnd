@@ -1,0 +1,38 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: black;
+    color: aliceblue;
+}
+
+
+.tituloMenor{
+    font-size: 14px;
+}
+
+#titulo1{
+    line-height: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.botao{
+    padding: 5px;
+    border-radius: 7px;
+    background-color: rgb(132, 198, 255);
+}
+
+.filho{
+    align-items: center;
+}
