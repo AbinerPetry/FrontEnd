@@ -29,7 +29,7 @@ let food = {
 let score = 0;
 
 // Inicializa a velocidade do jogo (em milissegundos)
-let speed = 200;
+let speed = 250;
 
 // Adiciona um ouvinte para eventos de tecla que chama a função changeDirection
 document.addEventListener('keydown', changeDirection);
@@ -76,7 +76,7 @@ function draw() {
         placar.innerHTML = `Pontuação: ${score}`;
 
         // Aumenta a velocidade do jogo
-        speed = Math.max(50, speed - 10); // Diminui o intervalo, mas não menos que 50ms
+        speed = Math.max(50, speed - 5); // Diminui o intervalo, mas não menos que 50ms
         clearInterval(game);
         game = setInterval(draw, speed);
     } else {
