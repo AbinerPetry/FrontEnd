@@ -9,9 +9,6 @@ body {
 
 #body2{
     font-family: 'Splendid';
-    color: aliceblue;
-    margin: 0;
-    padding: 0;
     background-image: url(img/milo-e-miguel-v0-pylw3tq5bxdb1.webp);
     background-size: cover;
 }
@@ -79,5 +76,57 @@ main{
     padding: 30px;
     border-radius: 30px;
     background-color: rgba(17, 246, 162, 0.447);
-    box-shadow: 0 0 20px 10px  rgba(4, 165, 146, 0.808);  ;
+    box-shadow: 0 0 20px 10px  rgba(4, 165, 146, 0.808);  
+}
+
+.pergunta {
+    font-size: 5vh;
+    font-family: 'Splendid';
+    margin: 0;
+    letter-spacing: 0.3vh;
+
+} 
+
+.opcoes{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.respostas {
+    width: 300px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-family: 'Splendid';
+    color: black;
+    background-color: rgb(166, 250, 243);
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.respostas:hover {
+    background-color: rgb(25, 114, 107);
+    color: rgb(0, 255, 195);
+    text-shadow: 0 0 10px  rgba(0, 255, 157, 0.808); 
+    transform: scale(1.1);
+}
+
+.tela-cheia {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vh;
+    height: 100vh;
+    z-index: 1000;
+    background-color: black;
+}
+
+.tela-cheia img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
