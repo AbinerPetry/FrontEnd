@@ -7,13 +7,13 @@ function responder (correta) {
         setInterval(() => {
             goFullScreen();
             exibirErro();
-        },2000)
+        },300)
     }
 }
 
 function exibirErro() {
-    const telaCheiaErro = Document.getElementById('telaCheiaErro');
-    const somErro = Document.getElementById('somErro');
+    const telaCheiaErro = document.getElementById('telaCheiaErro');
+    const somErro = document.getElementById('somErro');
 
     telaCheiaErro.style.display = 'flex';
 
