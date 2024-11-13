@@ -1,0 +1,12 @@
+.pequeno {
+    width: 50vh;
+    
+}
+
+.grande{
+    width: 1000vh;
+}
+
+.desativado{
+    display: none;
+}
