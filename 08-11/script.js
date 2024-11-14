@@ -1,6 +1,8 @@
 function responder (correta) {
     if(correta) {
-        alert('Resposta correta! Indo para a próxima pergunta...')
+       questoes[perguntaAtiva].classList.remove('ativa')
+       perguntaAtiva += 1
+       ativar()
     }
 
     else{
@@ -48,4 +50,11 @@ function sairTelaCheia() {
     }else if (document.msExitFullScreen){
         document.msExitFullScreen();
     }
+}
+
+let perguntaAtiva = 0;
+const questoes = document.querySelectorAll('.questao')
+
+function ativar(){
+    questoes[perguntaAtiva].classList.toggle('ativa')
 }
