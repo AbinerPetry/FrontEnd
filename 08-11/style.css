@@ -140,3 +140,7 @@ main{
     display: flex;
 }
 
+#i{
+    border-radius: 20px;
+
+}

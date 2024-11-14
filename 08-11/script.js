@@ -3,6 +3,7 @@ function responder (correta) {
        questoes[perguntaAtiva].classList.remove('ativa')
        perguntaAtiva += 1
        ativar()
+       placar.innerHTML = `Pontuação: ${perguntaAtiva}`;
     }
 
     else{
@@ -10,6 +11,8 @@ function responder (correta) {
             goFullScreen();
             exibirErro();
         },300)
+
+
     }
 }
 
